@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Converter Css Units</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav>
+        <div class="nav-logo">
+            <a href="#" id="name">vrynd</a>
+            <a href="" id="github"><i class='bx bxl-github'></i></a>
+        </div>
+    </nav>
+    <div class="converter-container">
+        <h1>Css Converter</h1>
+        <div class="converter">
+            <input type="number" id="inputValue" placeholder="Enter value" inputmode="numeric" />
+            <select id="inputUnit">
+                <option value="px">Pixel (px)</option>
+                <option value="em">Em (em)</option>
+                <option value="rem">Rem (rem)</option>
+                <option value="vw">Viewport Width (vw)</option>
+                <option value="vh">Viewport Height (vh)</option>
+                <option value="percent">Percent (%)</option>
+            </select>
+            <span><i class='bx bx-transfer-alt bx-rotate-90' ></i></span>
+            <select id="outputUnit">
+                <option value="px">Pixel (px)</option>
+                <option value="em">Em (em)</option>
+                <option value="rem">Rem (rem)</option>
+                <option value="vw">Viewport Width (vw)</option>
+                <option value="vh">Viewport Height (vh)</option>
+                <option value="percent">Percent (%)</option>
+            </select>
+            <div class="button">
+                <button type="submit" onclick="convert()">Convert</button>
+                <button type="reset" onclick="resetFields()">Reset</button>
+            </div>
+            <div id="result"></div>
+        </div>
+    </div>
+    <footer>
+        <div class="create-by">
+            <p>Made with ❤️ by <a href="https://github.com/vrynd">vrynd</a></p>
+        </div>
+    </footer>
+    <script src="/js/script.js"></script>
+</body>
+</html>

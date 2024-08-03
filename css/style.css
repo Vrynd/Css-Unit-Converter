@@ -1,0 +1,176 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100%;
+    font-family: "Josefin Sans", sans-serif;
+    font-optical-sizing: auto;
+    background-color: #f0f0f0;
+    color: #ffffff;
+    margin:0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+nav {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    display: block;
+    padding: 20px 10%;
+}
+
+nav .nav-logo {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav .nav-logo #name {
+    font-size: 30px;
+    text-decoration: none;
+    color: steelblue;
+    font-weight: 700;
+    text-shadow: 1px 1px 4px black;
+}
+
+nav .nav-logo #github {
+    font-size: 30px;
+    color: #000000;
+    display: block;
+    position: relative;
+}
+
+nav .nav-logo #github::after {
+    content: "GitHub";
+    font-size: 16px;
+    text-align: center;
+    color: #ffffff;
+    font-weight: 600;
+    padding: 10px 15px;
+    position: absolute;
+    top: 105%;
+    left: 50%;
+    transform: translate(-50%, -100%);
+    border-top-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background-color: red;
+    transition: transform 0.7s ease, opacity 0.7s ease;
+    opacity: 0;
+    pointer-events: none;
+    white-space: nowrap;
+}
+
+nav .nav-logo #github:hover::after {
+    transform: translate(-50%, 10px);
+    opacity: 1;
+}
+.converter-container{
+    max-width: 600px;
+    min-width: 320px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 20px;
+    position: relative;
+}
+
+.converter-container h1{
+    display: inline;
+    color:#000000;
+    text-align: left;
+    font-size: 30px;
+}
+
+.converter{
+    display: flex;
+    flex-direction: column;
+    margin-top: 15px;
+    text-align: center;
+}
+
+.converter input,
+.converter select{
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+span i{
+    color: red;
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.converter .button{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.converter .button button{
+    width: 100%;
+    font-size: 18px;
+    font-weight: 600;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    padding: 10px;
+    border: none;
+    transition: .4s all ease;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    &:hover{
+        transform: translateY(-7px);
+        box-shadow: 2px 2px 2px 1px #000000;
+    }
+}
+
+.converter .button button[type="submit"]{
+    background-color: steelblue;
+}
+
+.converter .button button[type="reset"]{
+    background-color: green;
+}
+
+#result {
+    font-size: 20px;
+    font-weight: bold;
+    color: red;
+    text-align: left;
+}
+
+footer{
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    padding: 20px 10%;
+    display: block;
+}
+
+footer .create-by{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+footer .create-by p{
+    color: #000000;
+    font-size: 19px;
+}
+
+footer .create-by a{
+    text-decoration: none;
+    color: steelblue;
+}
+
